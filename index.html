@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./assets/menu.svg">
+  <title>Isaac Malebana</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__left">
+      <div class="mobile-menu">
+        <div class="logo">Isaac </div>
+        <div class="menu-btn" onclick="toggleMenu()">
+          <img id="image" src="./assets/menu.svg" alt="" srcset="">
+        </div>
+      </div>
+      <div class="nav nav-responsive">
+        <span class="nav__link"><a href="#home">Home</a></span>
+        <span class="nav__link"><a href="#about">About</a></span>
+        <span class="nav__link"><a href="#projects">Projects</a></span>
+        <span class="nav__link"><a href="#contact">Contact</a></span>
+        <div class="float">
+          <a href="#contact" class="header__btn btn">Hire Me</a>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <section id="home" class="home">
+    <div class="home__title">A Front End Developer</div>
+    <div class="home__description">
+      I'm a trusted to get the job done, as I often deliver beyond expectations.
+    </div>
+    <div class="home__btn">
+      <a href="#projects" class="home__btn-project btn">My Projects</a>
+      <a href="#contact" class="home__btn-contact btn">Contact Me</a>
+    </div>
+  </section>
+  <section id="about" class="about">
+    <div class="about__description">
+      <h1 class="title">About Me</h1>
+      <div class="title-line"></div>
+      <div class="info description-middle">
+        Hello, my name is Isaac Malebana a frontend developer with over a year of experience.
+        I enjoy writing code to solve real-world problems, whether it's for a website, a landing page, or a web application.
+        Creating professional, brand-specific websites in order to convert website visitors into customers, is what I'm always
+        aiming to achieve.
+      </div>
+      <div class="info">
+        I enjoy collaborating and working on projects with others. I can also work independently <span style="font-size: 20p;">😊</span>.
+        You can count on me to create websites. If you have something in mind free to reach out. 
+
+      </div>
+    </div>
+    <div class="about__image">
+      <img src="./assets/dev.svg" alt="">
+    </div>
+  </section>
+  <section id="projects" class="project">
+    <div class="project__section">
+      <h1 class="project__title">Projects</h1>
+      <div class="project__line"></div>
+      <div class="project__container">
+        <div class="card">
+          <img class="card__image" src="./assets/agrisolution_view.PNG" alt="">
+          <div class="card__overlay">
+            <div class="overlay-content">
+              Agrisolution is a project created for farmers, agricultural professionals,
+              and financial advisers to have a platform where they can get farming solutions,
+              it includes chat, a blog, and getting weather information functionality.
+              The project is created in angular, tailwind, and firebase.
+              <br>
+              <p> Project is created in angular, tailwind and firebase.</p>
+              <a class="overlay-content__link btn" href="https://the-agri-solutions.web.app/" target="_blank"
+                >View Project</a>
+              <a class="overlay-content__link btn" href="https://github.com/kgisaackg/agri-solutions" target="_blank" >View
+                Source</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card__image" src="./assets/amazon_view.PNG" alt="">
+          <div class="card__overlay">
+            <div class="overlay-content">
+              Amazon clone is an e-commerce application, this has full e-commerce functionality like adding items to a cart, placing an order, and handling payments.
+              <br>
+              <p> Project is created in React and firebase.</p>
+              <a class="overlay-content__link btn" href="" target="_blank"
+                >View Project</a>
+              <a class="overlay-content__link btn" href="https://github.com/kgisaackg/amazon_clone" target="_blank" >View
+                Source</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <div class="contact__container">
+      <div class="form">
+        <h1 class="form__header">Feel free to message me!</h1>
+        <p class="form__info">
+          Have a question, want to hire me or just want to chat?
+        </p>
+        <form name="contact" method="POST" data-netlify="true">
+          <div class="form__group">
+            <div class="col">
+              <label>Your Name</label>
+              <input type="text" name="name" id="" required>
+            </div>
+            <div class="col form__group-email">
+              <label>Your Email Address</label>
+              <input type="text" name="email" id="" required>
+            </div>
+          </div>
+          <div class="form__textarea">
+            <label>Your Message</label><br>
+            <textarea name="message" class="contact__textarea"></textarea>
+          </div>
+          <div class="form__group">
+            <button type="submit" class="btn btn__send">Send</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="contact-card">
+        <h3>I normally respond in 2 - 3 days.</h3>
+        <p>I would appreaciate any feedback based on my portfolio.</p>
+        <p>Want me to join you on a project send me an email.</p>
+        <p>Any programming challenges you want me to try, I'm in.</p>
+      </div>
+    </div>
+    <div class="footer">
+      <h3>Find me on social media.</h3>
+      <p class="footer__link">
+        <a href="https://github.com/kgisaackg" target="_blank">Github</a>
+        <a href="https://www.linkedin.com/in/isaac-malebana-theprogrammer/" target="_blank">Linkedin</a>
+      </p>
+      <hr>
+      <p>&copy; 2022 Isaac Malebana</p>
+    </div>
+  </section>
+  <script>
+
+    let img = document.getElementById('image');
+
+    const toggleMenu = () => {
+      document.querySelectorAll(".nav-responsive").forEach(el => {
+        if (el.style.height === "auto") {
+          img.src = "./assets/menu.svg";
+          el.style.height = 0;
+          el.style.padding = 0;
+        } else {
+          el.style.position = "absolute"
+          img.src = "./assets/close.svg"
+          el.style.height = "auto";
+          el.style.padding = "20px";
+        }
+
+        img.appendChild(img);
+
+      })
+    }
+  </script>
+</body>
+
+</html>
