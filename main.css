@@ -6,7 +6,6 @@
 
 html { scroll-behavior: smooth; } 
 
-/** Style for common element/tags  **/
 body{
   font-family: 'Catamaran', sans-serif;
   margin: 0;
@@ -20,7 +19,7 @@ a{
   text-decoration: none;
 }
 
-a:hover{
+.nav__link:hover{
   text-decoration: underline 4px;
   text-underline-offset: 4px;
 }
@@ -295,11 +294,6 @@ img{
   margin: 20px 0px;
   color: #fff;
 }
-
-/* .form__group{
-  display: flex;
-  justify-content: space-between;
-} */
 
 .form__group-email{
   margin-top: 30px;
